@@ -40,6 +40,8 @@ df_dtm <- df_filtered %>%
   cast_sparse(id, word, doc_count)
 
 ##Run multiple topic models to see which K makes the most sense
+set.seed(8675309)
+
 k_list <- seq(5, 50, by = 5)
 
 # Fit a bunch of LDA models; this takes a while to run
